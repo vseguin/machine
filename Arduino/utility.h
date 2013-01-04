@@ -1,0 +1,117 @@
+#ifndef utility_h
+#define utility_h
+#include "Servo.h"
+
+bool pushButtonPressed();
+
+// Offset ms pour Normal Speed
+/*
+enum Offset {
+  OFFSET_BARRIERE = 280,
+  OFFSET_BARRIERE_PRENDRE = 250,
+  OFFSET_POST_BAT_PRENDRE = 300,
+  OFFSET_BALLE = 560,
+  OFFSET_SHORT = 230,
+  OFFSET_OEUF = 135,
+  OFFSET_LASER = 350
+};*/
+
+// Offset en ticks
+enum Offset
+{
+  OFFSET_BARRIERE = 180,
+  OFFSET_BARRIERE_PRENDRE = 150,
+  OFFSET_POST_BAT_PRENDRE = 180,
+  OFFSET_BALLE = 336,
+  OFFSET_SHORT = 138,
+  OFFSET_OEUF = 81,
+  OFFSET_LASER = 210,
+  OFFSET_POSTDESTRUCTION = 150,
+  OFFSET_NULL = 0
+};
+
+enum TrialsPales {
+  PALES_TOUR = 5,
+  PALES_PREBARRIERE = 3,
+  PALES_BARRIERE = 1,
+  PALES_BATTERIE_PRENDRE = 5,
+  PALES_POST_BATTERIE_PRENDRE = 2,
+  PALES_BALLE = 7,
+  PALES_SHORT = 4,
+  PALES_BATTERIE_DEPOSER = 2,
+  PALES_OEUF = 1,
+  PALES_LASER = 1,
+  PALES_DESTRUCTION = 19,
+  PALES_POSTDESTRUCTION = 1
+};
+
+enum Trials {
+  BALLE,
+  PREBARRIERE,
+  BARRIERE,
+  BATTERIE_DEPOSER,
+  BATTERIE_PRENDRE,
+  POST_BAT_PRENDRE,
+  DESTRUCTION,
+  POST_DESTRUCTION,
+  IDLE,
+  INITIALIZE,
+  LASER,
+  OEUF,
+  SHORT,
+  TOUR
+};
+
+// microseconds
+enum YawValue {
+  FRONT       = 1500,
+  F_BARRIERE  = 1730,
+  R_TAKEBAT   = 2400,
+  L_RELBAT    = 950,
+  LEFT        = 700,
+  RIGHT       = 2500,
+  BEGINNING   = 1951,
+  F_BARRIERE2 = 1950,
+  F_OEUF      = 1560
+};
+
+enum TiltValue {
+  TILT_PRE_BARRIERE = 760,
+  TILT_BARRIERE_FIRST = 900,
+  TILT_BATTERIE_PRENDRE = 720,
+  TILT_POST_BATTERIE_PRENDRE = 1000,
+  TILT_PRE_OEUF = 690,
+  TILT_FIRST_DEPOSER_BATTERIE=760,
+  TILT_BATTERIE_DEPOSER = 800,
+  HORIZONTAL = 950,
+  VERTICAL   = 2000
+};
+
+enum TiltSpeed {
+  TILT_SPEED_BATTERIE_DEPOSER = 300
+};
+
+enum ServoValue {
+  SERVOFLAG_DOWN      = 800,
+  SERVOFLAG_UP        = 2000,
+  SERVOPRE_PULL       = 1000,
+  SERVOPRE_RELEASE    = 2200,
+  SERVOPINGPONG_READY = 700,
+  SERVOPINGPONG_SHOOT = 1500
+};
+
+enum DirectionMovement {
+  BACKWARD = false,
+  FORWARD  = true
+};
+
+//ticks par seconds
+enum Speed {
+  NOSPEED     = 0L,
+  LOWSPEED    = 100L,
+  NORMALSPEED = 600L,
+  QUICKSPEED  = 830L
+};
+
+
+#endif
